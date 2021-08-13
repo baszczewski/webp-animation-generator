@@ -1,0 +1,15 @@
+{
+  "name": "webp-animation-generator",
+  "version": "1.0.0",
+  "description": "Create WebP animation from sample images.",
+  "main": "index.js",
+  "scripts": {
+    "build-libwebp": "./build-libwebp.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webp"
+  ],
+  "author": "Marcin Baszczewski <marcin@baszczewski.pl>",
+  "license": "MIT"
+}

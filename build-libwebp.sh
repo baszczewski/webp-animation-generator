@@ -31,7 +31,7 @@ ARGS=(
   -I./imageio
   -Llibwebp
   -Qunused-arguments
-  -o wasm/dist/img2webp.js examples/img2webp.c examples/example_util.c imageio/*.c src/{dec,dsp,demux,enc,mux,utils}/*.c
+  -o ../dist/img2webp.js examples/img2webp.c examples/example_util.c imageio/*.c src/{dec,dsp,demux,enc,mux,utils}/*.c
   -s INVOKE_RUN=0 
   -s EXPORT_ES6
   -s USE_LIBPNG

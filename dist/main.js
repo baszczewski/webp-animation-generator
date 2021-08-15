@@ -7,9 +7,6 @@ function imageDataFromCanvas(canvas) {
     return ia;
 }
 export class AnimationGenerator {
-    worker;
-    generateResolve;
-    generateReject;
     async init(library) {
         if (this.worker) {
             return;

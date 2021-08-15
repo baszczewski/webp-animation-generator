@@ -33,11 +33,13 @@ ARGS=(
   -Qunused-arguments
   -o ../dist/img2webp.js examples/img2webp.c examples/example_util.c imageio/*.c src/{dec,dsp,demux,enc,mux,utils}/*.c
   -s INVOKE_RUN=0 
-  -s EXPORT_ES6
+  -s ALLOW_MEMORY_GROWTH=1
   -s USE_LIBPNG
   -s USE_ZLIB
+  -s ENVIRONMENT=web
   -s EXPORTED_FUNCTIONS="[_main, _malloc]" # export main funcs
-  -s EXTRA_EXPORTED_RUNTIME_METHODS="[FS, cwrap, setValue, writeAsciiToMemory]" # export preamble funcs
+  -s EXPORTED_RUNTIME_METHODS="[FS, cwrap, setValue, writeAsciiToMemory]" # export preamble funcs
   -s INITIAL_MEMORY=33554432 # 33554432 bytes = 32 MB
+  -Os
 )
 emcc "${ARGS[@]}"

@@ -1,15 +1,15 @@
 {
   "name": "webp-animation-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create WebP animation from sample images.",
-  "main": "dist/main.js",  
+  "main": "dist/main.js",
   "typings": "dist/main.js.map",
   "scripts": {
+    "demo": "node demo.js",
     "build": "tsc",
     "build-libwebp": "./build-libwebp.sh",
-    "release": "npm run build && npm run build-libwebp",
-    "demo": "node demo.js",
-    "prepack": "npm run build && npm run build-libwebp"
+    "release": "npm run build-libwebp && npm run build",
+    "prepack": "npm run release"
   },
   "keywords": [
     "webp"

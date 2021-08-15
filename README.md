@@ -1,11 +1,14 @@
-Create WebP animation from sample images.
+Create WebP animation from sample images. You can use image data or canvas directly.
+
+Important notice: this library is optimised only for web usage at the moment.
+
 
 ```js
 import { AnimationGenerator } from '../dist/main.js';
 
 const instance = new AnimationGenerator();
 
-await instance.init('/dist/img2webp.js');
+await instance.init('/dist/worker.js');
 
 const file1 = await (await fetch('/file-01.webp').then(resp => resp.blob())).arrayBuffer();
 const file2 = await (await fetch('/file-02.webp').then(resp => resp.blob())).arrayBuffer();
